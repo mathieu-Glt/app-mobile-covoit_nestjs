@@ -1,0 +1,29 @@
+.banner_title_login {
+    background: red;
+}
+
+.fom_login {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+}
+
+.form {
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 150px;
+}
+
+.input_fomr {
+    background: rgb(241, 235, 235);
+    width: 200px;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.button_form {
+    margin-top: 15px;
+
+}
