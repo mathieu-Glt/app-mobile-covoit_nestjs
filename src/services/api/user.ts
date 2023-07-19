@@ -8,7 +8,7 @@ export async function userConnected() {
     try {
         const userConnected = await api.get('user/show/me')
         console.log("🚀 ~ file: user.ts:10 ~ userConnected ~ userConnected:", userConnected)
-        return userConnected.data
+        return userConnected.data.datas
     } catch (error) {
         throw  new Error("Error during the request for take user connected")
 

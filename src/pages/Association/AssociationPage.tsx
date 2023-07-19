@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { userConnected } from "../../../services/api/user";
-import { getEventById } from "../../../services/api/events";
+import { getAssociationById } from "../../services/api/association";
 import { useHistory, useParams } from "react-router";
 import { IonHeader, IonTitle, IonNav, IonToolbar, IonNavLink, IonContent, IonItem, IonLabel, IonList, IonButton, IonImg, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from "@ionic/react";
+import { userConnected } from "../../services/api/user";
 
-export default function EventPage(props) {
+
+export default function AssociationPage(props) {
+    console.log("🚀 ~ file: ASSOCIATIONpAGE.TSX:9 ~ AssociationPage ~ props:", props)
     const history = useHistory();
     const params = useParams();
     const id = params.id;
@@ -14,7 +16,7 @@ export default function EventPage(props) {
     // console.log("🚀 ~ file: Event.tsx:8 ~ Event ~ props:", props)
 
 
-    const [event, setEvent] = useState([]);
+    const [association, setAssociation] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -37,18 +39,18 @@ export default function EventPage(props) {
 
 
     useEffect(() => {
-        async function loadEvent() {
+        async function loadAssociation() {
             console.log("COUCOU ID ", id);
 
-            const events = await getEventById(id);
-            console.log("🚀 ~ file: EventListPage.tsx:13 ~ loadUser ~ events:", events)
-            setEvent(events);
+            const association = await getAssociationById(id);
+            console.log("🚀 ~ file: ASSOCIATIONpAGE.TSX:46 ~ loadAssociation ~ association:", association)
+            setAssociation(association);
         }
-        loadEvent();
+        loadAssociation();
     }, [])
     
     if (isLoading) {
-        return <div>Loading event...</div>
+        return <div>Loading association...</div>
     };
     
     if (error) {
@@ -56,7 +58,7 @@ export default function EventPage(props) {
     }
     
     
-    console.log("🚀 ~ file: EventPage.tsx:46 ~ loadEvent ~ event:", event)
+    console.log("🚀 ~ file: EventPage.tsx:46 ~ loadEvent ~ event:", association)
 
 
 
@@ -64,17 +66,16 @@ export default function EventPage(props) {
         <>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Page detaille évènement</IonTitle>
+                    <IonTitle>Page detaille association</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonButton onClick={() => history.goBack()}>Go</IonButton>
 
             <IonCard>
-            <IonImg src="https://www.africatopsports.com/wp-content/uploads/2015/03/france.jpg" ></IonImg>
-                <IonCardTitle>{event.name}</IonCardTitle>
-                <IonCardSubtitle>{event.description}</IonCardSubtitle>
-                <IonCardSubtitle>participant : {event.participant}</IonCardSubtitle>
-                <IonCardContent>addresse : {event.event_address}</IonCardContent>
+            <IonImg src="https://www.ligne.fr/medias/2018/02/sports-e1517588086643-1070x1000.png" ></IonImg>
+                <IonCardTitle>{association.name}</IonCardTitle>
+                <IonCardSubtitle>{association.description}</IonCardSubtitle>
+                <IonCardSubtitle>crée le : {association.createdAt}</IonCardSubtitle>
             </IonCard>
 
         </>

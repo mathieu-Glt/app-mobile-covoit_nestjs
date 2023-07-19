@@ -35,6 +35,7 @@ import LoginPage from "./components/LoginForm/LoginForm";
 import Tabs from "./services/utils/Tabs";
 import PrivateRoute from "./services/utils/PrivateRoute";
 import EventPage from "./pages/Tabs/Event/EventPage";
+import AssociationPage from "./pages/Association/AssociationPage";
 
 setupIonicReact();
 // todo transform en fonction 
@@ -46,6 +47,7 @@ function App()  {
 
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/events/:id" component={EventPage} />
+        <Route exact path="/associations/:id" component={AssociationPage} />
 
 
         <Route path="/tabs">

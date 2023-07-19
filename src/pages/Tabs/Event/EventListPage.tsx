@@ -20,12 +20,9 @@ export default function EventListPage() {
       try {
         const user = await userConnected();
         console.log("🚀 ~ file: EventListPage.tsx:13 ~ loadUser ~ user:", user)
-        setIsLoading(false)
-  
+
       } catch (error) {
         console.log("🚀 ~ file: EventListPage.tsx:23 ~ loadUser ~ error:", error)
-        setError(error)
-        setIsLoading(false)
       }
     }
     loadUser();
@@ -33,14 +30,25 @@ export default function EventListPage() {
 
 
   useEffect(() => {
+
     async function loadEvents() {
-      const events = await getAllEvents();
-      console.log("🚀 ~ file: EventListPage.tsx:13 ~ loadUser ~ events:", events)
-      setEvents(events);
+      try {
+        const events = await getAllEvents();
+        console.log("🚀 ~ file: EventListPage.tsx:13 ~ loadUser ~ events:", events)
+        setEvents(events);
+        setIsLoading(false)
+
+      } catch (error) {
+        console.log("🚀 ~ file: EventListPage.tsx:13 ~ loadUser ~ events:", error)
+        setError(error)
+        setIsLoading(false)
+
+      }
+
     }
     loadEvents();
   }, [])
-    
+
 
   if (isLoading) {
     return <div>Loading events...</div>
@@ -62,19 +70,19 @@ export default function EventListPage() {
       </IonHeader>
 
       <IonContent color="light" >
-      <IonList inset={true}>
-    {events ? events.map((e:any, i) => (
-      <>
-      <IonImg src="https://www.africatopsports.com/wp-content/uploads/2015/03/france.jpg" ></IonImg>
-       <IonItem key={e._id}>
-          <IonLabel>{e.name}</IonLabel>
-          {/* <IonLabel>{e.description}</IonLabel> */}
-            <IonButton routerLink={`/events/${e._id}`}>Details</IonButton>
-        </IonItem>
-        </>
-      )): <div><p>Not events loading</p></div>} 
-      </IonList>
-    </IonContent>
+        <IonList inset={true}>
+          {events ? events.map((e: any, i) => (
+            <>
+              <IonImg src="https://www.africatopsports.com/wp-content/uploads/2015/03/france.jpg" ></IonImg>
+              <IonItem key={e._id}>
+                <IonLabel>{e.name}</IonLabel>
+                {/* <IonLabel>{e.description}</IonLabel> */}
+                <IonButton routerLink={`/events/${e._id}`}>Details</IonButton>
+              </IonItem>
+            </>
+          )) : <div><p>Not events loading</p></div>}
+        </IonList>
+      </IonContent>
     </>
   );
 }

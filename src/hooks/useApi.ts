@@ -42,9 +42,9 @@ export function useApi() {
                 try {
                     const result = await refreshTokens();
                     console.log('Bonjour REACT')
-                    localStorage.setItem('accessToken', result?.data.accessToken);
-                    localStorage.setItem('refreshToken', result?.data.refreshToken);
-                    originalRequest.headers['Authorization'] = 'Bearer ' + result?.data.accessToken;
+                    localStorage.setItem('accessToken', result?.data.datas.accessToken);
+                    localStorage.setItem('refreshToken', result?.data.datas.refreshToken);
+                    originalRequest.headers['Authorization'] = 'Bearer ' + result?.data.datas.accessToken;
                     return axios(originalRequest);
                 } catch (error) {
                     destroyTokenUser();
