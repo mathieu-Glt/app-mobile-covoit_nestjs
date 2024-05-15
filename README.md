@@ -12,9 +12,9 @@ The concept of our application is to help users for organize trajects of their c
 ## Launch the project locally
 For run the project locally, just follow these steps below : <br>
 Install all dependencies<br>
-  npm install<br>
+  -> npm install<br>
 Once the dependencies are installed, start the development server with the following command<br>
-  npm run dev
+  -> npm run dev
 
 ## Configuration 
 Create a file .env and insert the the following url for communicate with the backend server 
