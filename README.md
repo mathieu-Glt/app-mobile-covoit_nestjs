@@ -4,4 +4,4 @@
 The concept of our application is to help parents for organize trajects of their children to extrascholar activities by promoting (with) car sharing.
 
 ## Technologies 
-- <img src="https://cdn.worldvectorlogo.com/logos/react-1.svg" width="100" />
+<img src="https://cdn.worldvectorlogo.com/logos/react-1.svg" width="80" />
