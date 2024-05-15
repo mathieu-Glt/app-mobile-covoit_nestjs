@@ -10,10 +10,10 @@ The concept of our application is to help users for organize trajects of their c
 <img src="https://www.cypress.io/cypress_logo_social.png" width="80" />
 
 ## Launch the project locally
-For run the project locally, just follow these steps below : 
-Install all dependencies
+For run the project locally, just follow these steps below : <br>
+Install all dependencies<br>
   npm install
-Once the dependencies are installed, start the development server with the following command
+Once the dependencies are installed, start the development server with the following command<br>
   npm run dev
 
 ## Configuration 
