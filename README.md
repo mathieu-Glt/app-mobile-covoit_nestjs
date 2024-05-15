@@ -5,5 +5,5 @@ The concept of our application is to help parents for organize trajects of their
 
 ## Technologies 
 <img src="https://cdn.worldvectorlogo.com/logos/react-1.svg" width="80" />
-<img src="https://www.google.com/search?q=logo+ionic&sca_esv=73797eb15fc8c283&sca_upv=1&ei=V8pEZpPHG4eYkdUP_pSjOA&oq=logo+ionic&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmxvZ28gaW9uaWMqAggAMgUQABiABDIIEAAYFhgeGA8yCBAAGBYYChgeMgYQABgWGB4yBhAAGBYYHjIIEAAYFhgKGB4yBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkjDGlCOB1iZDXACeAGQAQGYAZABoAGKA6oBAzQuMbgBA8gBAPgBAZgCBqAClQLCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICBxAAGIAEGAqYAwCIBgGQBgqSBwE2oAfVFw&sclient=gws-wiz-serp#vhid=aNpS6qy42h9NlM&vssid=l" width="80" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ionic_Logo.svg/2560px-Ionic_Logo.svg.png" width="80" />
 
