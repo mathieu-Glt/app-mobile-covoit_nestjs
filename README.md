@@ -11,9 +11,9 @@ The concept of our application is to help users for organize trajects of their c
 
 ## Launch the project locally
 For run the project locally, just follow these steps below : 
-- Install all dependencies
+Install all dependencies
   npm install
-- Once the dependencies are installed, start the development server with the following command
+Once the dependencies are installed, start the development server with the following command
   npm run dev
 
 ## Configuration 
