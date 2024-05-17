@@ -5,6 +5,7 @@ The concept of our application is to help users for organize trajects of their c
 
 ## Technologies 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/2078px-Vitejs-logo.svg.png" width="80" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.pngg" width="80" />
 <img src="https://cdn.worldvectorlogo.com/logos/react-1.svg" width="80" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ionic_Logo.svg/2560px-Ionic_Logo.svg.png" width="80" />
 <img src="https://www.cypress.io/cypress_logo_social.png" width="80" />
